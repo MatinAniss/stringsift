@@ -198,7 +198,7 @@ checksum = "2c340fe0f0b267787095cbe35240c6786ff19da63ec7b69367ba338eace8169b"
 dependencies = [
  "bitflags",
  "boa_interner",
- "boa_macros",
+ "boa_macros 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "boa_string",
  "indexmap",
  "num-bigint",
@@ -214,11 +214,11 @@ dependencies = [
  "arrayvec",
  "bitflags",
  "boa_ast",
- "boa_gc",
+ "boa_gc 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "boa_interner",
- "boa_macros",
+ "boa_macros 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "boa_parser",
- "boa_profiler",
+ "boa_profiler 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "boa_string",
  "bytemuck",
  "cfg-if",
@@ -256,21 +256,30 @@ version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2425c0b7720d42d73eaa6a883fbb77a5c920da8694964a3d79a67597ac55cce2"
 dependencies = [
- "boa_macros",
- "boa_profiler",
+ "boa_macros 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "boa_profiler 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "boa_string",
  "hashbrown 0.15.2",
  "thin-vec",
 ]
 
 [[package]]
+name = "boa_gc"
+version = "0.20.0"
+source = "git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97#6dd14f1be7491f91a2bca37fee2aac4451361f97"
+dependencies = [
+ "boa_macros 0.20.0 (git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97)",
+ "boa_profiler 0.20.0 (git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97)",
+ "hashbrown 0.15.2",
+]
+
+[[package]]
 name = "boa_interner"
 version = "0.20.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "42407a3b724cfaecde8f7d4af566df4b56af32a2f11f0956f5570bb974e7f749"
+source = "git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97#6dd14f1be7491f91a2bca37fee2aac4451361f97"
 dependencies = [
- "boa_gc",
- "boa_macros",
+ "boa_gc 0.20.0 (git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97)",
+ "boa_macros 0.20.0 (git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97)",
  "hashbrown 0.15.2",
  "indexmap",
  "once_cell",
@@ -292,6 +301,18 @@ dependencies = [
 ]
 
 [[package]]
+name = "boa_macros"
+version = "0.20.0"
+source = "git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97#6dd14f1be7491f91a2bca37fee2aac4451361f97"
+dependencies = [
+ "cow-utils",
+ "proc-macro2",
+ "quote",
+ "syn",
+ "synstructure",
+]
+
+[[package]]
 name = "boa_parser"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -300,8 +321,8 @@ dependencies = [
  "bitflags",
  "boa_ast",
  "boa_interner",
- "boa_macros",
- "boa_profiler",
+ "boa_macros 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "boa_profiler 0.20.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "fast-float2",
  "icu_properties",
  "num-bigint",
@@ -315,6 +336,11 @@ name = "boa_profiler"
 version = "0.20.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4064908e7cdf9b6317179e9b04dcb27f1510c1c144aeab4d0394014f37a0f922"
+
+[[package]]
+name = "boa_profiler"
+version = "0.20.0"
+source = "git+https://github.com/MatinAniss/boa.git?rev=6dd14f1be7491f91a2bca37fee2aac4451361f97#6dd14f1be7491f91a2bca37fee2aac4451361f97"
 
 [[package]]
 name = "boa_string"
@@ -501,6 +527,12 @@ name = "core-foundation-sys"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "773648b94d0e5d620f64f280777445740e61fe701025087ec8b57f45c791888b"
+
+[[package]]
+name = "cow-utils"
+version = "0.1.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "417bef24afe1460300965a25ff4a24b8b45ad011948302ec221e8a0a81eb2c79"
 
 [[package]]
 name = "crossbeam-utils"
