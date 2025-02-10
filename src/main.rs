@@ -12,13 +12,11 @@ use tokio::{fs, task::JoinSet};
 use url::Url;
 
 #[derive(Parser)]
-#[command(version, about, long_about = None)]
 struct Args {
     /// The supplied URL that will be sifted
-    #[arg(short, long)]
     url: Url,
 
-    /// Spoof TLS handshake to behave like a browser
+    /// Spoof TLS handshakes to behave like a browser
     #[arg(short, long)]
     spoof: bool,
 }
